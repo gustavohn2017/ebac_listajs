@@ -9,46 +9,34 @@
 <body>
   <h2 class="d-flex justify-content-center">Lista contatos</h2> 
     <div class="d-flex justify-content-center w-300">           
-          <form>
+          <form id="form-contato">
+            <div class="form-group">
+              <label for="exampleNome">Nome</label>
+              <input id="nome" type="text" class="form-control w-250 p-3" id="formNome" placeholder="Joaozinho das Quebrada">
+            </div>
+            <div class="form-group">
+              <label for="exampleNome">Numero</label>
+              <input id="numero" type="number" class="form-control w-250 p-3" id="formNumero" placeholder="(12)1234-56789">
+            </div>
             <div class="form-group">
               <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control w-250 p-3" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-            </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control w-250 p-3" id="exampleInputPassword1" placeholder="Password">
-            </div>
+              <input id = "email" type="email" class="form-control w-250 p-3" id="formEmail" aria-describedby="emailHelp" placeholder="exemplo@email.com">
+            </div>            
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
         </div>
-        <div class="d-flex justify-content-center w-300 p-3">
-        <table class="table table-striped table-dark w-50">
+        <div class="d-flex justify-content-center w-30 p-3">
+        <table id="table" class="table table-striped table-dark w-50">
             <thead>
               <tr>
+                <th scope="col">Id</th>
                 <th scope="col">Nome</th>
                 <th scope="col">Numero</th>
                 <th scope="col">Email</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-              </tr>
+              <!-- resultado JS aparecerá aqui -->
             </tbody>
           </table>
         </div>

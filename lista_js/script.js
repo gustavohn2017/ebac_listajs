@@ -1,4 +1,8 @@
 const form = document.getElementById('form-contato');
+
+
+let linhas = '';
+
 form.addEventListener('submit', function(e){
     e.preventDefault();
     const inputNome = document.getElementById('nome');
@@ -18,8 +22,6 @@ form.addEventListener('submit', function(e){
     inputNome.value = '';
     inputEmail.value = '';
     inputNumero.value = '';
-
-
 
 })
     

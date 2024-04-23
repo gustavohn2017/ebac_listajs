@@ -1,6 +1,4 @@
 const form = document.getElementById('form-contato');
-
-
 let linhas = '';
 
 form.addEventListener('submit', function(e){
@@ -9,10 +7,25 @@ form.addEventListener('submit', function(e){
     const inputEmail = document.getElementById('email');
     const inputNumero = document.getElementById('numero');
 
+    // Função para formatar o número de telefone
+    function formatarNumero(numero) {
+        // Remove tudo que não é número
+        let numeroLimpo = numero.replace(/\D/g, '');
+        
+        // Adiciona parênteses no DDD e o 9 obrigatório
+        if (numeroLimpo.length === 11) {
+            numeroLimpo = numeroLimpo.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3');
+        } else if (numeroLimpo.length === 10) {
+            numeroLimpo = numeroLimpo.replace(/^(\d{2})(\d{4})(\d{4})$/, '($1) $2-$3');
+        }
+        
+        return numeroLimpo;
+    }
+
     let linha = '<tr>'
     linha += `<td>${inputNome.value}</td>`
     linha += `<td>${inputEmail.value}</td>`
-    linha += `<td>${inputNumero.value}</td>`
+    linha += `<td>${formatarNumero(inputNumero.value)}</td>`
     linha += '</tr>'
 
     linhas += linha
@@ -24,4 +37,3 @@ form.addEventListener('submit', function(e){
     inputNumero.value = '';
 
 })
-    

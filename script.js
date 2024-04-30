@@ -24,12 +24,10 @@ form.addEventListener('submit', function(e){
 
     let linha = '<tr>'
     linha += `<td>${inputNome.value}</td>`
-    linha += `<td>${inputEmail.value}</td>`
     linha += `<td>${formatarNumero(inputNumero.value)}</td>`
+    linha += `<td>${inputEmail.value}</td>`    
     linha += '</tr>'
-
     linhas += linha
-
     const corpotabela = document.querySelector('tbody');
     corpotabela.innerHTML = linhas;
     inputNome.value = '';
